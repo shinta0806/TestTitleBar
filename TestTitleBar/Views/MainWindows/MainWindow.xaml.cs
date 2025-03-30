@@ -1,6 +1,6 @@
-﻿using TestTitleBar.Views;
+using TestTitleBar.Views;
 
-namespace TestTitleBar;
+namespace TestTitleBar.Views.MainWindows;
 
 public sealed partial class MainWindow : WindowEx
 {
