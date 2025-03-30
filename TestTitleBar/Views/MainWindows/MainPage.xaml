@@ -14,7 +14,7 @@
 			<StackPanel Orientation="Horizontal" >
 
 				<!-- タイトルバーコントロール：システムアイコン表示用としてのみ使用 -->
-				<TitleBar Name="TitleBarIcon" Width="32" >
+				<TitleBar Width="32" >
 					<TitleBar.IconSource >
 						<ImageIconSource ImageSource="/Assets/WindowIcon.ico" />
 					</TitleBar.IconSource>
