@@ -4,23 +4,66 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{ThemeResource SolidBackgroundFillColorBaseBrush}"
     mc:Ignorable="d">
 
-	<Grid x:Name="ContentArea">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="48" />
-			<RowDefinition Height="*" />
-		</Grid.RowDefinitions>
+	<RelativePanel >
 
-		<TextBlock
-            Grid.Row="0"
-            x:Uid="Main_Title"
-            Style="{StaticResource PageTitleStyle}" />
+		<!-- タイトルバー行：SetTitleBar() で指定するコントロール -->
+		<RelativePanel Name="TitleLine" Height="32" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" >
 
-		<Grid Grid.Row="1">
+			<StackPanel Orientation="Horizontal" >
 
-		</Grid>
+				<!-- タイトルバーコントロール：システムアイコン表示用としてのみ使用 -->
+				<TitleBar Name="TitleBarIcon" Width="32" >
+					<TitleBar.IconSource >
+						<ImageIconSource ImageSource="/Assets/WindowIcon.ico" />
+					</TitleBar.IconSource>
+				</TitleBar>
 
-	</Grid>
+				<!-- メニューバー -->
+				<MenuBar VerticalAlignment="Center" >
+					<MenuBarItem Title="ファイル(F)" AccessKey="F" >
+						<MenuFlyoutItem Text="終了(Q)" AccessKey="Q" Command="{x:Bind ViewModel.NotImplementedClickedCommand}" />
+					</MenuBarItem>
+					<MenuBarItem Title="ツール(T)" AccessKey="T" >
+						<MenuFlyoutItem Text="環境設定(S)..." AccessKey="S" Command="{x:Bind ViewModel.NotImplementedClickedCommand}" />
+					</MenuBarItem>
+					<MenuBarItem Title="ヘルプ(H)" AccessKey="H" >
+						<MenuFlyoutItem Text="ヘルプ(H)" AccessKey="H" Command="{x:Bind ViewModel.NotImplementedClickedCommand}" />
+					</MenuBarItem>
+				</MenuBar>
+
+				<!-- 検索ボタン -->
+				<Button Margin="10,0,0,0" Command="{x:Bind ViewModel.NotImplementedClickedCommand}" >
+					<StackPanel Orientation="Horizontal" >
+						<FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE721;" />
+						<TextBlock Text="検索" Margin="5,0,0,0" />
+					</StackPanel>
+				</Button>
+
+				<!-- ドキュメント名：背景色を変更 -->
+				<StackPanel Orientation="Horizontal" Height="24" Margin="20,0,0,0" Padding="10,0,10,0" Background="White" >
+					<TextBlock Text="ドキュメント名" VerticalAlignment="Center"/>
+				</StackPanel>
+
+			</StackPanel>
+
+			<!-- ログインボタン -->
+			<Button Width="24" Height="24" CornerRadius="12" Padding="0" 
+					RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,150,0" 
+					Command="{x:Bind ViewModel.NotImplementedClickedCommand}" >
+				<FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEE57;" />
+			</Button>
+
+		</RelativePanel>
+
+		<!-- クライアント領域 -->
+		<RelativePanel Background="{ThemeResource SolidBackgroundFillColorBaseBrush}" 
+					   RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"
+					   RelativePanel.Below="TitleLine" RelativePanel.AlignBottomWithPanel="True" >
+			<TextBlock Text="クライアント領域" Margin="20" />
+		</RelativePanel>
+
+	</RelativePanel>
+
 </Page>

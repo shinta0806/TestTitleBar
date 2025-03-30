@@ -1,5 +1,3 @@
-using TestTitleBar.Views;
-
 namespace TestTitleBar.Views.MainWindows;
 
 public sealed partial class MainWindow : WindowEx
@@ -8,8 +6,10 @@ public sealed partial class MainWindow : WindowEx
 	{
 		InitializeComponent();
 
+		// タスクバーに反映される
 		AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets/WindowIcon.ico"));
-		Content = new MainPage();
 		Title = "TestTitleBar";
+
+		Content = new MainPage(this);
 	}
 }
