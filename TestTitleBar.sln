@@ -5,8 +5,6 @@ VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTitleBar", "TestTitleBar\TestTitleBar.csproj", "{F4E1F95A-03BC-D22C-ABD3-85720DCEBB5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTitleBar.Core", "TestTitleBar.Core\TestTitleBar.Core.csproj", "{32291803-A9DA-6690-EF58-F73332F36C2E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -19,10 +17,6 @@ Global
 		{F4E1F95A-03BC-D22C-ABD3-85720DCEBB5D}.Release|x64.ActiveCfg = Release|x64
 		{F4E1F95A-03BC-D22C-ABD3-85720DCEBB5D}.Release|x64.Build.0 = Release|x64
 		{F4E1F95A-03BC-D22C-ABD3-85720DCEBB5D}.Release|x64.Deploy.0 = Release|x64
-		{32291803-A9DA-6690-EF58-F73332F36C2E}.Debug|x64.ActiveCfg = Debug|x64
-		{32291803-A9DA-6690-EF58-F73332F36C2E}.Debug|x64.Build.0 = Debug|x64
-		{32291803-A9DA-6690-EF58-F73332F36C2E}.Release|x64.ActiveCfg = Release|x64
-		{32291803-A9DA-6690-EF58-F73332F36C2E}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
