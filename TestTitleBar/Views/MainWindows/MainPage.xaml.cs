@@ -1,6 +1,5 @@
 using Microsoft.UI.Xaml.Controls;
 
-using TestTitleBar.ViewModels;
 using TestTitleBar.ViewModels.MainWindows;
 
 namespace TestTitleBar.Views.MainWindows;
